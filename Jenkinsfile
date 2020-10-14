@@ -23,7 +23,7 @@ stage ("Install Application Dependencies") {
                   }
               }
         steps {sh '''
-                         pylint simple_rest.py
+                         ./venv/bin/pylint simple_rest.py
                    '''
               }
     }
