@@ -10,16 +10,20 @@ stage ("Install Application Dependencies") {
 
                         /usr/local/bin/virtualenv --python=python2.7 venv
                     fi
-                    source venv/bin/activate
-                    export PYTHONPATH="$PWD:$PYTHONPATH"
+                    source ./venv/bin/activate
                     /usr/local/bin/pip install  -r requirements.txt
               '''
               }
        }
 
     stage('Linting') {
+        when {
+                      expression {
+                          currentBuild.result == null || currentBuild.result == 'SUCCESS'
+                      }
+              }
             steps {
-                   sh '''
+
                          pylint simple_rest.py
                    '''
                   }
