@@ -6,7 +6,13 @@ agent any
 stage ("Install Application Dependencies") {
         steps{
               sh '''
-                  /usr/local/bin/pip install  -r requirements.txt
+                    if [ ! -d venv ] ; then
+
+                        virtualenv --python=python2.7 venv
+                    fi
+                    source venv/bin/activate
+                    export PYTHONPATH="$PWD:$PYTHONPATH"
+                    /usr/local/bin/pip install  -r requirements.txt
               '''
               }
        }
