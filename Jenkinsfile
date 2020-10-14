@@ -18,15 +18,14 @@ stage ("Install Application Dependencies") {
 
     stage('Linting') {
         when {
-                      expression {
-                          currentBuild.result == null || currentBuild.result == 'SUCCESS'
-                      }
+                  expression {
+                      currentBuild.result == null || currentBuild.result == 'SUCCESS'
+                  }
               }
-            steps {
-
+        steps {sh '''
                          pylint simple_rest.py
                    '''
-                  }
+              }
     }
 
 
