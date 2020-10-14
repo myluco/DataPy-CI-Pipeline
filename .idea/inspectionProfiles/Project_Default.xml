@@ -1,0 +1,32 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="quasarcli" />
+            <item index="1" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="2" class="java.lang.String" itemvalue="qaas" />
+            <item index="3" class="java.lang.String" itemvalue="quanta-client" />
+            <item index="4" class="java.lang.String" itemvalue="cm_client" />
+            <item index="5" class="java.lang.String" itemvalue="Click" />
+            <item index="6" class="java.lang.String" itemvalue="polling" />
+            <item index="7" class="java.lang.String" itemvalue="requests" />
+            <item index="8" class="java.lang.String" itemvalue="urllib3" />
+            <item index="9" class="java.lang.String" itemvalue="toml" />
+            <item index="10" class="java.lang.String" itemvalue="Jinja2" />
+            <item index="11" class="java.lang.String" itemvalue="retry" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="texas_cluster_creator.texas_metadata_creator.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
