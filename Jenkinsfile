@@ -6,18 +6,18 @@ agent any
 stage ("Install Application Dependencies") {
         steps{
               sh '''
-                  /usr/local/bin/pip install --user -r requirements.txt
+                  /usr/local/bin/pip install  -r requirements.txt
               '''
               }
        }
 
-stage('Linting') {
-        steps {
-               sh '''
-                     pylint simple_rest.py
-               '''
-              }
-}
+    stage('Linting') {
+            steps {
+                   sh '''
+                         pylint simple_rest.py
+                   '''
+                  }
+    }
 
 
 stage('Unit Test') {
