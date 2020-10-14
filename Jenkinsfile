@@ -6,7 +6,7 @@ agent any
 stage ("Install Application Dependencies") {
         steps{
               sh '''
-                    pip install virtualenv
+                    /usr/local/bin/pip install virtualenv
                     if [ ! -d venv ] ; then
 
                         virtualenv --python=python2.7 venv
@@ -14,7 +14,7 @@ stage ("Install Application Dependencies") {
                     source venv/bin/activate
                     export PYTHONPATH="$PWD:$PYTHONPATH"
                     /usr/local/bin/pip install  -r requirements.txt
-                    pip install pylint
+                    /usr/local/bin/pip install pylint
               '''
               }
        }
