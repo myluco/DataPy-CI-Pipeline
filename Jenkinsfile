@@ -8,7 +8,7 @@ stage ("Install Application Dependencies") {
               sh '''
                     if [ ! -d venv ] ; then
 
-                        virtualenv --python=python2.7 venv
+                        /Users/luiza.carneiro/.pyenv/shims/virtualenv --python=python2.7 venv
                     fi
                     source venv/bin/activate
                     export PYTHONPATH="$PWD:$PYTHONPATH"
